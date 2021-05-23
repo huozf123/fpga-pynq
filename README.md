@@ -65,13 +65,13 @@ $ git submodule update --init --recursive    #快速开始不需要执行该指�
 1)<a name="quickinst"></a> 快速开始
 ------------------
 
-_用预先编译好的镜像，运行hello world程序在rocket chip上 (注：此环节无需安装任何工具)_
+*用预先编译好的镜像，运行hello world程序在rocket chip上 (注：此环节无需安装任何工具)*
 
 首先，将SD卡通过读卡器插入系统，进入目标开发板的目录 (可选项是 `zybo`, `zedboard`,  `zc706`，`pynq-z2`)。执行如下命令将镜像拷入SD卡（或者手动将`$REPO/pynq-z2/fpga-images-pynq`目录下的四个文件拷贝至SD卡），将“SD卡的路径”替换为实际SD卡的路径：
 
     $ make load-sd SD=SD卡的路径
 
-最后，弹出SD卡，将其插入开发板，将开发板的启动跳线设置为“ SD”，然后打开开发板的电源。 使用网线连接至开发板，打开主机终端用SSH登录ARM端的linux系统（用户名密码均为_root_），并在rocket chip上运行hello world： 
+最后，弹出SD卡，将其插入开发板，将开发板的启动跳线设置为“ SD”，然后打开开发板的电源。 使用网线连接至开发板，打开主机终端用SSH登录ARM端的linux系统（用户名密码均为*root*），并在rocket chip上运行hello world： 
 
     $ ssh root@192.168.1.5
     root@zynq:~# ./fesvr-zynq pk hello
@@ -101,7 +101,7 @@ $ ./build.sh
 3)<a name="compile"></a> 工程编译的详细步骤
 -------------------------
 
-_前提：安装好的Vivado 2016.2 ，一个可以运行scala代码的JVM（注：测试使用的java版本为1.8.0_271，如果编译rocket chip过程中遇到java错误，可能是java版本的原因）_
+*前提：安装好的Vivado 2016.2 ，一个可以运行scala代码的JVM（注：测试使用的java版本为1.8.0_271，如果编译rocket chip过程中遇到java错误，可能是java版本的原因）*
 
 首先添加Vivado相关的环境变量，执行（替换掉“你的vivado安装目录”）：
 
