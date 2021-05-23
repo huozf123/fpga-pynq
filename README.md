@@ -2,7 +2,7 @@
 
 该仓库包含在Vivado 2016.2上的各种Zynq FPGA开发板（Zybo，Zedboard，ZC706，PYNQ-z2）上运行RISC-V rocket chip所需的文件。 （注：因为Vivado版本问题，推荐使用Ubuntu16.04操作系统）
 
-###如何使用该README：
+### 如何使用该README：
 
 该README主要包含3部分：
 
