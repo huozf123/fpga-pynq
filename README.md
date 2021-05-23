@@ -216,8 +216,7 @@ _Partition type_ 选择datafile，然后点击_OK_。
 * `BOOT.bin` - 包含FSBL、bitstream、u-boot。
 * `uImage` - zynq ARM端的Linux内核。
 * `devicetree.dtb` - Linux需要的设备树文件。
-* `uImage` - Linux for the ARM PS
-* `devicetree.dtb` - Contains information about the ARM core's peripherals for linux.
+* `uramdisk.image.gz` - ARM linux的文件系统。
 
 最终只需将linux根文件系统复制到该目录下即可完成SD卡内所有文件的准备工作，进入目标开发板的目录，执行：
 
