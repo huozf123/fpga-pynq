@@ -134,11 +134,11 @@ $ sed -i "11,15s/^/#/" 你的vivado安装目录/Vivado/2016.2/.settings64-Vivado
 
 	$ make vivado
 
-然后点击左下角的_Generate Bitstream_按钮， Vivado将自动生成比特流文件。该文件位置为：
+然后点击左下角的*Generate Bitstream*按钮， Vivado将自动生成比特流文件。该文件位置为：
 
 `$REPO/pynq-z2/pynq_rocketchip_ZynqFPGAConfig/pynq_rocketchip_ZynqFPGAConfig.runs/impl_1/rocketchip_wrapper.bit`
 
-下一步，点击_File -> Export -> Export Hardware_。这将创建以下目录：
+下一步，点击*File -> Export -> Export Hardware*。这将创建以下目录：
 
 `$REPO/pynq-z2/pynq_rocketchip_ZynqFPGAConfig/pynq_rocketchip_ZynqFPGAConfig.sdk`
 
@@ -147,13 +147,13 @@ $ sed -i "11,15s/^/#/" 你的vivado安装目录/Vivado/2016.2/.settings64-Vivado
 
 ### 3.3) <a name="fsbl"></a> 编译FSBL
 
-在Vivado界面点击_File -> Launch SDK_ 打开SDK：
+在Vivado界面点击*File -> Launch SDK* 打开SDK：
 
-1) 点击 _File -> New -> Application Project_
+1) 点击 *File -> New -> Application Project*
 
 2) 在弹出的新窗口中，输入"FSBL" 作为Project name，其他项保持默认：
 
-3) 点击_Next_，然后依次点击_Zynq FSBL_ 和_Finish_。然后SDK将继续自动编译FSBL。
+3) 点击*Next*，然后依次点击*Zynq FSBL* 和*Finish*。然后SDK将继续自动编译FSBL。
 
 4) 编译完成后，继续下一步。
 
@@ -169,29 +169,29 @@ $ sed -i "11,15s/^/#/" 你的vivado安装目录/Vivado/2016.2/.settings64-Vivado
 
 ### 3.5) <a name="boot.bin"></a> 创建boot.bin
 
-回到SDK界面，点击 _Xilinx Tools -> Create Zynq Boot Image_。
+回到SDK界面，点击 *Xilinx Tools -> Create Zynq Boot Image*。
 
-1) 点击_Output BIF file path_后面的_Browse.._,然后找到并选择`$REPO/pynq-z2/deliver_output`。
+1) 点击*Output BIF file path*后面的*Browse..*,然后找到并选择`$REPO/pynq-z2/deliver_output`。
 
-2) 点击右下角的_Add_，并在弹出的对话框中点击_Browse_，找到如下文件（First Stage BootLoader）：
+2) 点击右下角的*Add*，并在弹出的对话框中点击*Browse*，找到如下文件（First Stage BootLoader）：
 
 `$REPO/pynq-z2/pynq_rocketchip_ZynqFPGAConfig/pynq_rocketchip_ZynqFPGAConfig.sdk/FSBL/Debug/FSBL.elf`
 
-_Partition type_选择bootloader，然后点击_OK_。
+*Partition type*选择bootloader，然后点击*OK*。
 
-3) 再一次点击 _Add_，并在弹出的对话框中点击_Browse_，找到如下文件（bitstream）：
+3) 再一次点击 *Add*，并在弹出的对话框中点击*Browse*，找到如下文件（bitstream）：
 
 `$REPO/pynq-z2/pynq_rocketchip_ZynqFPGAConfig/pynq_rocketchip_ZynqFPGAConfig.runs/impl_1/rocketchip_wrapper.bit`
 
-_Partition type_ 选择datafile，然后点击_OK_。
+*Partition type* 选择datafile，然后点击*OK*。
 
-4)  再一次点击 _Add_，并在弹出的对话框中点击_Browse_，找到如下文件（uboot）：
+4)  再一次点击 *Add*，并在弹出的对话框中点击*Browse*，找到如下文件（uboot）：
 
 `$REPO/pynq-z2/soft_build/u-boot.elf`
 
-_Partition type_ 选择datafile，然后点击_OK_。
+*Partition type* 选择datafile，然后点击*OK*。
 
-5) 点击_Create Image_。这将产生 `BOOT.bin` 文件在 `$REPO/pynq-z2/deliver_output` 目录下。
+5) 点*Create Image*。这将产生 `BOOT.bin` 文件在 `$REPO/pynq-z2/deliver_output` 目录下。
 
 进行完以上5个步骤之后，如果再次修改其中的文件，可以进入目标开发板的目录，通过如下命令快速生成boot.bin文件（注：最终写入到SD卡中的boot.bin文件名不区分大小写）。
 
@@ -230,7 +230,7 @@ _Partition type_ 选择datafile，然后点击_OK_。
 	|-> uImage
 	|-> uramdisk.image.gz
 
-此时已经完成了所有工作，打开开发板电源，使用网线（用户名密码均为_root_）连接至开发板并运行hello world： 
+此时已经完成了所有工作，打开开发板电源，使用网线（用户名密码均为*root*）连接至开发板并运行hello world： 
 
     $ ssh root@192.168.1.5
     root@zynq:~# ./fesvr-zynq pk hello
@@ -247,7 +247,7 @@ _Partition type_ 选择datafile，然后点击_OK_。
 
     $ scp file root@192.168.1.5:~/
 
-_注意_：上电期间对文件系统的修改不会写入`uramdisk.image.gz`文件中，如需永久修改文件系统参见如下：
+*注意*：上电期间对文件系统的修改不会写入`uramdisk.image.gz`文件中，如需永久修改文件系统参见如下：
 
 #### 修改linux文件系统
 1）首先需要安装uboot tools：
