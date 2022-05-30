@@ -1,6 +1,3 @@
-[submodule "pynq-z2/fpga-images-pynq"]
-	path = pynq-z2/fpga-images-pynq
-	url = https://github.com/huozf123/fpga-images-pynq.git
 [submodule "zedboard/fpga-images-zedboard"]
 	path = zedboard/fpga-images-zedboard
 	url = https://github.com/ucb-bar/fpga-images-zedboard.git
